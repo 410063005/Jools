@@ -37,7 +37,7 @@ public class Indexer<T> implements Iterable<IndexedElement<T>>, Iterator<Indexed
 	public void remove() {
 		//TODO: index?
 		//TODO: throw exception?
-		iterator.remove();
+		throw new UnsupportedOperationException();
 	}
 
 }
