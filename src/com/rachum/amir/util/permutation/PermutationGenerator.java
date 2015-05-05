@@ -113,10 +113,7 @@ public class PermutationGenerator<T> implements Iterator<List<T>>, Iterable<List
 	}
 
 	private void swap(final int k, final int l) {
-		final T tK = permutation.get(k);
-		final T tL = permutation.get(l);
-		permutation.set(l, tK);
-		permutation.set(k, tL);
+		Collections.swap(permutation, k, l);
 	}
 
 	//Find the largest index l such that a[k] < a[l]. Since k + 1 is such an index, l is well defined and satisfies k < l.
