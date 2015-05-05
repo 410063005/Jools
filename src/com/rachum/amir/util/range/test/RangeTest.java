@@ -64,6 +64,19 @@ public class RangeTest {
 		}
 	}
 
+	@Test
+	public void testNext3() {
+		for (int i : new Range(0, 10, 3)) {
+			org.junit.Assert.assertTrue(i < 10);
+		}
+		for (int i : new Range(30, 40, 3)) {
+			org.junit.Assert.assertTrue(i < 40);
+		}
+		for (int i : new Range(5, -5, -2)) {
+			org.junit.Assert.assertTrue(i > -5);
+		}
+	}
+
 	/**
 	 * Test method for {@link com.rachum.amir.util.range.Range#next()}.
 	 */

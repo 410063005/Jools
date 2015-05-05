@@ -45,7 +45,7 @@ public class Range implements Iterable<Integer>, Iterator<Integer> {
 	
 	@Override
 	public boolean hasNext() {
-		return (next != stop);
+		return step > 0 ? (next < stop) : (next > stop);
 	}
 
 	@Override
